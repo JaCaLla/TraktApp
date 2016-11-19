@@ -12,7 +12,7 @@ import Foundation
 class SearchMovieUC {
     static let sharedInstance = SearchMovieUC()
     
-    var page:Int = 0
+    var page:Int = 1
     let limit:Int = 100
     var ongoingRequest:Int = 0
     
@@ -23,7 +23,7 @@ class SearchMovieUC {
                serverFailure serverFail : @escaping ((NSError) -> ()),
                businessFailure businessFail : @escaping ((NSError) -> ())){
         
-        self.page = 0
+        self.page = 1
         
         self.ongoingRequest += 1
        // print("ongoingRequest + :\(ongoingRequest)")

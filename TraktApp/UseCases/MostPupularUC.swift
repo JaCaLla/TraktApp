@@ -12,7 +12,7 @@ import Foundation
 class MostPopularUC {
     static let sharedInstance = MostPopularUC()
     
-    var page:Int = 0
+    var page:Int = 1
     let limit:Int = 100
     
     private init() {}
@@ -21,7 +21,7 @@ class MostPopularUC {
                serverFailure serverFail : @escaping ((NSError) -> ()),
                businessFailure businessFail : @escaping ((NSError) -> ())){
         
-        self.page = 0
+        self.page = 1
         
         TraktService.sharedInstance.popular(page:self.page,
                                             limit:self.limit,

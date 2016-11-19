@@ -47,7 +47,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="74y-db-foq">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="74y-db-foq" customClass="MovieSearchBar" customModule="TraktApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -64,13 +64,15 @@
                             <constraint firstItem="k2b-ne-NzA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uD6-RJ-ius"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vBT-DZ-vkE"/>
                     <connections>
+                        <outlet property="movieSearchBar" destination="74y-db-foq" id="Ab9-E3-wXc"/>
                         <outlet property="moviesListView" destination="k2b-ne-NzA" id="KXU-2d-PAq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="98.50074962518741"/>
+            <point key="canvasLocation" x="-25" y="36"/>
         </scene>
     </scenes>
 </document>

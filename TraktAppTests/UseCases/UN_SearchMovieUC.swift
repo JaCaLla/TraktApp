@@ -89,4 +89,45 @@ class UN_SearchMovieUC: XCTestCase {
         
     }
     
+    
+    func test_searchFirstAndNext() {
+        
+        
+        let asyncExpectation = expectation(description: "Good case")
+        
+        SearchMovieUC.sharedInstance.first(query:"supe",
+                                           success: {
+                                            moviesSet in
+                                            
+                                            XCTAssertTrue(moviesSet.movies.count==2)
+                                            //  print("1st call:\(moviesSet.movies.count)")
+                                            
+                                            SearchMovieUC.sharedInstance.next(query:"supe",
+                                                                              success: {
+                                                                                moviesSet in
+                                                                                
+                                                                                XCTAssertTrue(moviesSet.movies.count==0)
+                                                                                //print("2nd call:\(moviesSet.movies.count)")
+                                                                                asyncExpectation.fulfill()
+                                            },serverFailure: { (error) in
+                                                XCTFail()
+                                            },businessFailure: { (error) in
+                                                XCTFail()
+                                            }
+                                            )
+                                            
+        },serverFailure: { (error) in
+            XCTFail()
+        },businessFailure: { (error) in
+            XCTFail()
+        }
+        )
+
+        
+
+        
+        self.waitForExpectations(timeout: 90, handler: nil)
+        
+        
+    }
 }

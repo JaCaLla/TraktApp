@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MoviesListViewDelegate: class {
-    func onRequestMovieSet(completion: @escaping ((MovieSet) -> Void))
+    func onRequestANewMovieSet(completion: @escaping ((MovieSet) -> Void))
 }
 
 
@@ -49,9 +49,10 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
         
         let movieTVC = self.dequeueReusableCell(withIdentifier: "MovieTVC")! as! MovieTVC
        movieTVC.movie = self.moviesList[indexPath.row]
-        
+      
+
         if(indexPath.row == self.moviesList.count - 1 ){
-            moviesListViewdelegate?.onRequestMovieSet(completion: { [unowned self] moviesSet in
+            moviesListViewdelegate?.onRequestANewMovieSet(completion: { [unowned self] moviesSet in
                 self.moviesList += moviesSet.movies
                 
                 DispatchQueue.main.async {

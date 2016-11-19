@@ -11,6 +11,7 @@
 		5A22E6541DE03E8000A3D4A7 /* MoviesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22E6531DE03E8000A3D4A7 /* MoviesListVC.swift */; };
 		5A22E6571DE03F2400A3D4A7 /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22E6561DE03F2400A3D4A7 /* MoviesListView.swift */; };
 		5A22E6591DE03FA100A3D4A7 /* MovieTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22E6581DE03FA100A3D4A7 /* MovieTVC.swift */; };
+		5A22E65B1DE0815100A3D4A7 /* MovieSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22E65A1DE0815100A3D4A7 /* MovieSearchBar.swift */; };
 		5A4ED3C21DDF6E7D008542B2 /* MostPupularUC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3C11DDF6E7D008542B2 /* MostPupularUC.swift */; };
 		5A4ED3C51DDF718A008542B2 /* TraktService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3C41DDF718A008542B2 /* TraktService.swift */; };
 		5A4ED3C81DDF72E5008542B2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3C71DDF72E5008542B2 /* Movie.swift */; };
@@ -54,6 +55,7 @@
 		5A22E6531DE03E8000A3D4A7 /* MoviesListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesListVC.swift; path = Controllers/MoviesListVC.swift; sourceTree = "<group>"; };
 		5A22E6561DE03F2400A3D4A7 /* MoviesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesListView.swift; path = Controllers/Views/MoviesListView.swift; sourceTree = "<group>"; };
 		5A22E6581DE03FA100A3D4A7 /* MovieTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieTVC.swift; path = Controllers/Views/MovieTVC.swift; sourceTree = "<group>"; };
+		5A22E65A1DE0815100A3D4A7 /* MovieSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieSearchBar.swift; path = Controllers/Views/MovieSearchBar.swift; sourceTree = "<group>"; };
 		5A4ED3C11DDF6E7D008542B2 /* MostPupularUC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MostPupularUC.swift; path = UseCases/MostPupularUC.swift; sourceTree = "<group>"; };
 		5A4ED3C41DDF718A008542B2 /* TraktService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraktService.swift; path = Rest/TraktService.swift; sourceTree = "<group>"; };
 		5A4ED3C71DDF72E5008542B2 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Model/Movie.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				5A22E6561DE03F2400A3D4A7 /* MoviesListView.swift */,
 				5A22E6581DE03FA100A3D4A7 /* MovieTVC.swift */,
+				5A22E65A1DE0815100A3D4A7 /* MovieSearchBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				5A4ED3C21DDF6E7D008542B2 /* MostPupularUC.swift in Sources */,
 				5A22E6541DE03E8000A3D4A7 /* MoviesListVC.swift in Sources */,
 				5AA81E6F1DDF69D6002F94BE /* AppDelegate.swift in Sources */,
+				5A22E65B1DE0815100A3D4A7 /* MovieSearchBar.swift in Sources */,
 				5A4ED3C81DDF72E5008542B2 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

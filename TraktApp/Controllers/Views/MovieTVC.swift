@@ -14,7 +14,7 @@ class MovieTVC: UITableViewCell {
     var movie:Movie?{
         didSet{
             if let title = movie?.title{
-                self.lblTitle.text = title
+                self.lblTitle.text = title 
             }
         }
     }

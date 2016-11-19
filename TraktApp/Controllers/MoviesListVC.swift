@@ -8,17 +8,18 @@
 
 import UIKit
 
-class MoviesListVC: UIViewController,MoviesListViewDelegate {
+
+class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelegate {
 
     enum ShowingMode {
         case popularListMode
         case searchListMode(String)
     }
 
-    let showingMode:ShowingMode = ShowingMode.popularListMode
+    var showingMode:ShowingMode = ShowingMode.popularListMode
     
     @IBOutlet weak var moviesListView: MoviesListView!
-    
+    @IBOutlet weak var movieSearchBar: MovieSearchBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate {
     
     
     // MARK: - MoviesListViewDelegate
-    func onRequestMovieSet(completion: @escaping ((MovieSet) -> Void)) {
+    func onRequestANewMovieSet(completion: @escaping ((MovieSet) -> Void)) {
         
         switch self.showingMode {
         case .popularListMode:
@@ -51,17 +52,65 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate {
                 // FIXME
                 print("TODO")
             })
-        default: break
+        case .searchListMode(let query):
+            SearchMovieUC.sharedInstance.next(query:query,success: {
+                moviesSet in
+                completion(moviesSet)
+            },serverFailure: { (error) in
+                // FIXME
+                print("TODO")
+            },businessFailure: { (error) in
+                // FIXME
+                print("TODO")
+            })
+            
+        }
+    }
+    
+    // MARK : - MovieSearchBarDelegate
+    func onRequestNewSearch(query:String){
+        
+        self.showingMode = .searchListMode(query)
+        
+        SearchMovieUC.sharedInstance.first(query: query,success: {[unowned self]
+            moviesSet in
+            
+            self.moviesListView.initialMoviesSet(moviesSet: moviesSet)
+            },serverFailure: { (error) in
+                // FIXME
+                print("TODO")
+        },businessFailure: { (error) in
+            // FIXME
+            print("TODO")
+        }
+        )
+    }
+
+    func onSearchCancel(){
+        
+        switch self.showingMode {
+        case .popularListMode: break
+
+        case .searchListMode:
+            self.showingMode = .popularListMode
+            self.loadPopular()
+            
+          
             
         }
 
-
+          view.endEditing(true)
+    }
+    
+    func onSearchDone() {
+        view.endEditing(true)
     }
     
 
     // MARK: - Private/Internal
     func setupUI(){
         moviesListView.moviesListViewdelegate = self
+        movieSearchBar.movieSearchBarDelegate = self
     }
     
     func loadPopular(){
