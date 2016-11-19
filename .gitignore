@@ -1,0 +1,67 @@
+Pods/Manifest.lock
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/javiercalatravallaveria.xcuserdatad/xcschemes/Alamofire.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/javiercalatravallaveria.xcuserdatad/xcschemes/Pods-TraktApp.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/javiercalatravallaveria.xcuserdatad/xcschemes/Pods-TraktAppTests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/javiercalatravallaveria.xcuserdatad/xcschemes/Pods-TraktAppUITests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/javiercalatravallaveria.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/Alamofire/Info.plist
+Pods/Target Support Files/Pods-TraktApp/Info.plist
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-acknowledgements.markdown
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-acknowledgements.plist
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-dummy.m
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-frameworks.sh
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-resources.sh
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-umbrella.h
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.debug.xcconfig
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.modulemap
+Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.release.xcconfig
+Pods/Target Support Files/Pods-TraktAppTests/Info.plist
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-acknowledgements.plist
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-dummy.m
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-frameworks.sh
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-resources.sh
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-umbrella.h
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.debug.xcconfig
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.modulemap
+Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.release.xcconfig
+Pods/Target Support Files/Pods-TraktAppUITests/Info.plist
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-acknowledgements.markdown
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-acknowledgements.plist
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-dummy.m
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-frameworks.sh
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-resources.sh
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-umbrella.h
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests.debug.xcconfig
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests.modulemap
+Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests.release.xcconfig
+TraktApp.xcworkspace/contents.xcworkspacedata
+TraktApp.xcworkspace/xcuserdata/javiercalatravallaveria.xcuserdatad/UserInterfaceState.xcuserstate
+TraktApp.xcworkspace/xcuserdata/javiercalatravallaveria.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+TraktApp.xcodeproj/project.xcworkspace/xcuserdata/javiercalatravallaveria.xcuserdatad/UserInterfaceState.xcuserstate
+TraktApp.xcodeproj/xcuserdata/javiercalatravallaveria.xcuserdatad/xcschemes/TraktApp.xcscheme

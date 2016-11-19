@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22724A20EFA68E24856F47B2 /* Pods_TraktApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D672F3EB9EB63884BC49EE /* Pods_TraktApp.framework */; };
+		5A4ED3C21DDF6E7D008542B2 /* MostPupularUC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3C11DDF6E7D008542B2 /* MostPupularUC.swift */; };
+		5A4ED3C51DDF718A008542B2 /* TraktService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3C41DDF718A008542B2 /* TraktService.swift */; };
+		5A4ED3C81DDF72E5008542B2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3C71DDF72E5008542B2 /* Movie.swift */; };
+		5A4ED3CA1DDF78F4008542B2 /* MovieSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3C91DDF78F4008542B2 /* MovieSet.swift */; };
+		5A4ED3CD1DDF7A9F008542B2 /* UN_TraktService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3CC1DDF7A9F008542B2 /* UN_TraktService.swift */; };
+		5A4ED3D01DDF847F008542B2 /* UN_Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3CF1DDF847F008542B2 /* UN_Movie.swift */; };
+		5A4ED3D21DDF8ED5008542B2 /* UN_MovieSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3D11DDF8ED5008542B2 /* UN_MovieSet.swift */; };
+		5A4ED3D41DDFC34D008542B2 /* SearchMovieUC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3D31DDFC34D008542B2 /* SearchMovieUC.swift */; };
+		5A4ED3D71DDFCB33008542B2 /* UN_SearchMovieUC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ED3D61DDFCB32008542B2 /* UN_SearchMovieUC.swift */; };
 		5AA81E6F1DDF69D6002F94BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA81E6E1DDF69D6002F94BE /* AppDelegate.swift */; };
 		5AA81E711DDF69D6002F94BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA81E701DDF69D6002F94BE /* ViewController.swift */; };
 		5AA81E741DDF69D6002F94BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA81E721DDF69D6002F94BE /* Main.storyboard */; };
 		5AA81E761DDF69D6002F94BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA81E751DDF69D6002F94BE /* Assets.xcassets */; };
 		5AA81E791DDF69D6002F94BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA81E771DDF69D6002F94BE /* LaunchScreen.storyboard */; };
-		5AA81E841DDF69D6002F94BE /* TraktAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA81E831DDF69D6002F94BE /* TraktAppTests.swift */; };
 		5AA81E8F1DDF69D6002F94BE /* TraktAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA81E8E1DDF69D6002F94BE /* TraktAppUITests.swift */; };
+		713BB224241FD7626B6F41CF /* Pods_TraktAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5802B6C91DE16A79DED4A1D7 /* Pods_TraktAppUITests.framework */; };
+		FF4E456FCDFB7C3BE3E6BD24 /* Pods_TraktAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A699B332214A403E465FF88B /* Pods_TraktAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11C9C13AE2542F1A532CA16C /* Pods-TraktAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C09E2FAEDA6E35A3A9855AF /* Pods-TraktAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F8F32EAC316AA4B446772C9 /* Pods-TraktAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5802B6C91DE16A79DED4A1D7 /* Pods_TraktAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraktAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4ED3C11DDF6E7D008542B2 /* MostPupularUC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MostPupularUC.swift; path = UseCases/MostPupularUC.swift; sourceTree = "<group>"; };
+		5A4ED3C41DDF718A008542B2 /* TraktService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraktService.swift; path = Rest/TraktService.swift; sourceTree = "<group>"; };
+		5A4ED3C71DDF72E5008542B2 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Model/Movie.swift; sourceTree = "<group>"; };
+		5A4ED3C91DDF78F4008542B2 /* MovieSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieSet.swift; path = Model/MovieSet.swift; sourceTree = "<group>"; };
+		5A4ED3CC1DDF7A9F008542B2 /* UN_TraktService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UN_TraktService.swift; path = Rest/UN_TraktService.swift; sourceTree = "<group>"; };
+		5A4ED3CF1DDF847F008542B2 /* UN_Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UN_Movie.swift; path = Model/UN_Movie.swift; sourceTree = "<group>"; };
+		5A4ED3D11DDF8ED5008542B2 /* UN_MovieSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UN_MovieSet.swift; path = Model/UN_MovieSet.swift; sourceTree = "<group>"; };
+		5A4ED3D31DDFC34D008542B2 /* SearchMovieUC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchMovieUC.swift; path = UseCases/SearchMovieUC.swift; sourceTree = "<group>"; };
+		5A4ED3D61DDFCB32008542B2 /* UN_SearchMovieUC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UN_SearchMovieUC.swift; path = UseCases/UN_SearchMovieUC.swift; sourceTree = "<group>"; };
 		5AA81E6B1DDF69D6002F94BE /* TraktApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA81E6E1DDF69D6002F94BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AA81E701DDF69D6002F94BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,11 +66,15 @@
 		5AA81E781DDF69D6002F94BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AA81E7A1DDF69D6002F94BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA81E7F1DDF69D6002F94BE /* TraktAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraktAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AA81E831DDF69D6002F94BE /* TraktAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktAppTests.swift; sourceTree = "<group>"; };
 		5AA81E851DDF69D6002F94BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA81E8A1DDF69D6002F94BE /* TraktAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraktAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA81E8E1DDF69D6002F94BE /* TraktAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktAppUITests.swift; sourceTree = "<group>"; };
 		5AA81E901DDF69D6002F94BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A699B332214A403E465FF88B /* Pods_TraktAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraktAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6D672F3EB9EB63884BC49EE /* Pods_TraktApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraktApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66256BF0CB6FE57AABC9E8C /* Pods-TraktApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E99475465BBA439DC76F0CB8 /* Pods-TraktApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.release.xcconfig"; sourceTree = "<group>"; };
+		F82DED6C34B4114977EC89FF /* Pods-TraktAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22724A20EFA68E24856F47B2 /* Pods_TraktApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4E456FCDFB7C3BE3E6BD24 /* Pods_TraktAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +98,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713BB224241FD7626B6F41CF /* Pods_TraktAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451EF7B3BCC17DE4DAC18C35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B66256BF0CB6FE57AABC9E8C /* Pods-TraktApp.debug.xcconfig */,
+				E99475465BBA439DC76F0CB8 /* Pods-TraktApp.release.xcconfig */,
+				F82DED6C34B4114977EC89FF /* Pods-TraktAppTests.debug.xcconfig */,
+				11C9C13AE2542F1A532CA16C /* Pods-TraktAppTests.release.xcconfig */,
+				2C09E2FAEDA6E35A3A9855AF /* Pods-TraktAppUITests.debug.xcconfig */,
+				2F8F32EAC316AA4B446772C9 /* Pods-TraktAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A4ED3C01DDF6DBD008542B2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5A4ED3C11DDF6E7D008542B2 /* MostPupularUC.swift */,
+				5A4ED3D31DDFC34D008542B2 /* SearchMovieUC.swift */,
+			);
+			name = UseCases;
+			sourceTree = "<group>";
+		};
+		5A4ED3C31DDF715C008542B2 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				5A4ED3C41DDF718A008542B2 /* TraktService.swift */,
+			);
+			name = Rest;
+			sourceTree = "<group>";
+		};
+		5A4ED3C61DDF724B008542B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A4ED3C71DDF72E5008542B2 /* Movie.swift */,
+				5A4ED3C91DDF78F4008542B2 /* MovieSet.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5A4ED3CB1DDF7A57008542B2 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				5A4ED3CC1DDF7A9F008542B2 /* UN_TraktService.swift */,
+			);
+			name = Rest;
+			sourceTree = "<group>";
+		};
+		5A4ED3CE1DDF8409008542B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A4ED3D11DDF8ED5008542B2 /* UN_MovieSet.swift */,
+				5A4ED3CF1DDF847F008542B2 /* UN_Movie.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5A4ED3D51DDFCAB8008542B2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5A4ED3D61DDFCB32008542B2 /* UN_SearchMovieUC.swift */,
+			);
+			name = UseCases;
+			sourceTree = "<group>";
+		};
 		5AA81E621DDF69D6002F94BE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +176,8 @@
 				5AA81E821DDF69D6002F94BE /* TraktAppTests */,
 				5AA81E8D1DDF69D6002F94BE /* TraktAppUITests */,
 				5AA81E6C1DDF69D6002F94BE /* Products */,
+				451EF7B3BCC17DE4DAC18C35 /* Pods */,
+				E4E48BDD26E21125597195F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +194,9 @@
 		5AA81E6D1DDF69D6002F94BE /* TraktApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A4ED3C61DDF724B008542B2 /* Model */,
+				5A4ED3C31DDF715C008542B2 /* Rest */,
+				5A4ED3C01DDF6DBD008542B2 /* UseCases */,
 				5AA81E6E1DDF69D6002F94BE /* AppDelegate.swift */,
 				5AA81E701DDF69D6002F94BE /* ViewController.swift */,
 				5AA81E721DDF69D6002F94BE /* Main.storyboard */,
@@ -110,7 +210,9 @@
 		5AA81E821DDF69D6002F94BE /* TraktAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				5AA81E831DDF69D6002F94BE /* TraktAppTests.swift */,
+				5A4ED3CE1DDF8409008542B2 /* Model */,
+				5A4ED3CB1DDF7A57008542B2 /* Rest */,
+				5A4ED3D51DDFCAB8008542B2 /* UseCases */,
 				5AA81E851DDF69D6002F94BE /* Info.plist */,
 			);
 			path = TraktAppTests;
@@ -125,6 +227,16 @@
 			path = TraktAppUITests;
 			sourceTree = "<group>";
 		};
+		E4E48BDD26E21125597195F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6D672F3EB9EB63884BC49EE /* Pods_TraktApp.framework */,
+				A699B332214A403E465FF88B /* Pods_TraktAppTests.framework */,
+				5802B6C91DE16A79DED4A1D7 /* Pods_TraktAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +244,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AA81E931DDF69D6002F94BE /* Build configuration list for PBXNativeTarget "TraktApp" */;
 			buildPhases = (
+				0D4B9404A9E0526D718443CD /* [CP] Check Pods Manifest.lock */,
 				5AA81E671DDF69D6002F94BE /* Sources */,
 				5AA81E681DDF69D6002F94BE /* Frameworks */,
 				5AA81E691DDF69D6002F94BE /* Resources */,
+				73CB0CDCB50DC20D5B35EC91 /* [CP] Embed Pods Frameworks */,
+				59923173AE768D06957D9ED8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AA81E961DDF69D6002F94BE /* Build configuration list for PBXNativeTarget "TraktAppTests" */;
 			buildPhases = (
+				3992F3B3C3915144CDF47CE9 /* [CP] Check Pods Manifest.lock */,
 				5AA81E7B1DDF69D6002F94BE /* Sources */,
 				5AA81E7C1DDF69D6002F94BE /* Frameworks */,
 				5AA81E7D1DDF69D6002F94BE /* Resources */,
+				D3AAE0B34619C4C58BE043B7 /* [CP] Embed Pods Frameworks */,
+				133CB86B084F896140FC383C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AA81E991DDF69D6002F94BE /* Build configuration list for PBXNativeTarget "TraktAppUITests" */;
 			buildPhases = (
+				77E9EE48576D70F4CD978561 /* [CP] Check Pods Manifest.lock */,
 				5AA81E861DDF69D6002F94BE /* Sources */,
 				5AA81E871DDF69D6002F94BE /* Frameworks */,
 				5AA81E881DDF69D6002F94BE /* Resources */,
+				5D1AAF5757C4B9BF50415001 /* [CP] Embed Pods Frameworks */,
+				7B49E224C3B77B29F5ACF1EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,13 +378,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D4B9404A9E0526D718443CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		133CB86B084F896140FC383C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3992F3B3C3915144CDF47CE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59923173AE768D06957D9ED8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1AAF5757C4B9BF50415001 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73CB0CDCB50DC20D5B35EC91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77E9EE48576D70F4CD978561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B49E224C3B77B29F5ACF1EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3AAE0B34619C4C58BE043B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5AA81E671DDF69D6002F94BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4ED3CA1DDF78F4008542B2 /* MovieSet.swift in Sources */,
+				5A4ED3C51DDF718A008542B2 /* TraktService.swift in Sources */,
+				5A4ED3D41DDFC34D008542B2 /* SearchMovieUC.swift in Sources */,
+				5A4ED3C21DDF6E7D008542B2 /* MostPupularUC.swift in Sources */,
 				5AA81E711DDF69D6002F94BE /* ViewController.swift in Sources */,
 				5AA81E6F1DDF69D6002F94BE /* AppDelegate.swift in Sources */,
+				5A4ED3C81DDF72E5008542B2 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +535,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA81E841DDF69D6002F94BE /* TraktAppTests.swift in Sources */,
+				5A4ED3D01DDF847F008542B2 /* UN_Movie.swift in Sources */,
+				5A4ED3D71DDFCB33008542B2 /* UN_SearchMovieUC.swift in Sources */,
+				5A4ED3D21DDF8ED5008542B2 /* UN_MovieSet.swift in Sources */,
+				5A4ED3CD1DDF7A9F008542B2 /* UN_TraktService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +680,7 @@
 		};
 		5AA81E941DDF69D6002F94BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B66256BF0CB6FE57AABC9E8C /* Pods-TraktApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
@@ -426,6 +694,7 @@
 		};
 		5AA81E951DDF69D6002F94BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E99475465BBA439DC76F0CB8 /* Pods-TraktApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
@@ -439,6 +708,7 @@
 		};
 		5AA81E971DDF69D6002F94BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82DED6C34B4114977EC89FF /* Pods-TraktAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +724,7 @@
 		};
 		5AA81E981DDF69D6002F94BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C9C13AE2542F1A532CA16C /* Pods-TraktAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +740,7 @@
 		};
 		5AA81E9A1DDF69D6002F94BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C09E2FAEDA6E35A3A9855AF /* Pods-TraktAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
@@ -483,6 +755,7 @@
 		};
 		5AA81E9B1DDF69D6002F94BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F8F32EAC316AA4B446772C9 /* Pods-TraktAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
@@ -514,6 +787,7 @@
 				5AA81E951DDF69D6002F94BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AA81E961DDF69D6002F94BE /* Build configuration list for PBXNativeTarget "TraktAppTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +796,7 @@
 				5AA81E981DDF69D6002F94BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AA81E991DDF69D6002F94BE /* Build configuration list for PBXNativeTarget "TraktAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +805,7 @@
 				5AA81E9B1DDF69D6002F94BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
