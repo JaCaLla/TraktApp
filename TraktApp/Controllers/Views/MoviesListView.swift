@@ -18,6 +18,8 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
     weak var moviesListViewdelegate:MoviesListViewDelegate?
     
     var moviesList:[Movie] = []
+    let cache = NSCache<NSString, UIImage>()
+    var imageProviders = Set<ImageProvider>()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,16 +55,58 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
 
         if(indexPath.row == self.moviesList.count - 1 ){
             moviesListViewdelegate?.onRequestANewMovieSet(completion: { [unowned self] moviesSet in
-                self.moviesList += moviesSet.movies
-                
-                DispatchQueue.main.async {
-                     self.refreshView()
+                if (moviesSet.movies.count>0){
+                    self.moviesList += moviesSet.movies
+                    
+                    DispatchQueue.main.async {
+                        self.refreshView()
+                    }
                 }
+
                
             })
         }
         
         return movieTVC
+    }
+    
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
+        
+        guard let cell = cell as? MovieTVC else { return }
+        
+        var movie:Movie = self.moviesList[indexPath.row]
+        
+        guard cache.object( forKey: "\(movie.pictureURL)" as NSString) != nil  else {
+            
+            let imageProvider = ImageProvider( movie:movie) { [unowned self]
+                image,url in
+                OperationQueue.main.addOperation {
+                    
+                    if(indexPath.row>=self.moviesList.count){
+                        return
+                    }
+                    movie.pictureURL=url
+                    self.moviesList[indexPath.row]=movie
+                    self.cache.setObject(image!, forKey: "\(movie.pictureURL)" as NSString)
+                    
+
+                    if(self._isVisible(indexpath: indexPath as NSIndexPath, tableView: tableView)){
+                        cell.updateImageViewWithImage(image: image)
+                    }
+                }
+                
+                return
+            }
+            imageProviders.insert(imageProvider)
+            return
+        }
+        
+        
+        let key = "\(movie.pictureURL)" as NSString
+        let image:UIImage = self.cache.object(forKey: key)! 
+        cell.updateImageViewWithImage(image: image)
+        
     }
     
     
@@ -82,6 +126,9 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
         self.dataSource = self
         self.delegate = self
         
+        self.separatorColor = UIColor.clear
+        self.estimatedRowHeight = 200;
+        self.rowHeight = UITableViewAutomaticDimension;
         
         self.refreshView()
     }
@@ -93,4 +140,10 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
 
     }
 
+    func _isVisible(indexpath:NSIndexPath, tableView:UITableView) ->Bool{
+        if let _ =  tableView.indexPathsForVisibleRows!.filter({$0.row == indexpath.row}).first {
+            return true
+        }
+        return false
+    }
 }

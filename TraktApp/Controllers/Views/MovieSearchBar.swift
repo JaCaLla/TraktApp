@@ -23,13 +23,12 @@ class MovieSearchBar: UISearchBar, UISearchBarDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.setupView()
+        self._setupView()
     }
     
     // UISearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
 
-          print("\(searchText)")
         self.movieSearchBarDelegate?.onRequestNewSearch(query: searchText)
       
     }
@@ -47,7 +46,21 @@ class MovieSearchBar: UISearchBar, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         self.movieSearchBarDelegate?.onSearchDone()
-        
+        self._enableCancelButton(searchBar)
+
+    }
+    
+    
+
+    // MARK : - Internal/Private
+    
+    private func _setupView(){
+        self.delegate = self
+        self.keyboardAppearance = UIKeyboardAppearance.dark
+    }
+
+
+    private func _enableCancelButton(_ searchBar: UISearchBar){
         for view in searchBar.subviews {
             for subview in view.subviews {
                 if let button = subview as? UIButton {
@@ -57,19 +70,4 @@ class MovieSearchBar: UISearchBar, UISearchBarDelegate {
         }
     }
     
-    // MARK : - Internal/Private
-    
-    private func setupView(){
-        self.delegate = self
-        
-        
-        self.refreshView()
-    }
-    
-    
-    private func refreshView(){
-        
-        
-    }
-
 }

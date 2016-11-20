@@ -12,7 +12,7 @@ struct Movie {
     let title : String
     let year : Int?
     var overview: String?
-    let imdb : String?
+    var imdb : String?
     var  pictureURL: URL?
     
     
@@ -34,6 +34,9 @@ struct Movie {
         year = dicJSON["year"] as? Int ?? 0
         //imdb=imdbStr
         
+        //Found with / at the end of som imbdCodes
+        imdb = imdb?.replacingOccurrences(of: "/", with: "", options: NSString.CompareOptions.literal, range:nil)
+        
     }
     
     init?(dicSearch:Any){
@@ -45,4 +48,13 @@ struct Movie {
         
         
     }
+}
+
+
+
+
+extension Movie: Equatable { }
+
+func ==(lhs: Movie, rhs: Movie) -> Bool {
+    return lhs.title == rhs.title && lhs.year == rhs.year && lhs.imdb == rhs.imdb
 }

@@ -92,5 +92,112 @@ class UN_Movie: XCTestCase {
             XCTFail()
         }
     }
+    
+    func test_equatable(){
+        let dicMovie1:[String:Any] = [
+            "title":"movie title" ,
+            "year": 2005 ,
+            "overview" : "overview text",
+            "ids": ["imdb": "tt0372784"]
+        ]
+        
+        if let movie1 = Movie(dicMovie: dicMovie1),
+           let movie2 = Movie(dicMovie: dicMovie1) {
+            XCTAssertEqual(movie1, movie2)
+        }else{
+            XCTFail()
+        }
+        
+        let dicMovie2:[String:Any] = [
+            "title":"movie title" ,
+            "year": 2005 ,
+            "overview" : "overview text",
+            "ids": ["imdb": "tt0372784"]
+        ]
+        
+        if let movie1 = Movie(dicMovie: dicMovie1),
+            let movie2 = Movie(dicMovie: dicMovie2) {
+            XCTAssertEqual(movie1, movie2)
+        }else{
+            XCTFail()
+        }
+        
+        let dicMovie3:[String:Any] = [
+            "title":"movie title different" ,
+            "year": 2005 ,
+            "overview" : "overview text",
+            "ids": ["imdb": "tt0372784"]
+        ]
+        
+        if let movie1 = Movie(dicMovie: dicMovie1),
+            let movie2 = Movie(dicMovie: dicMovie3) {
+            XCTAssertNotEqual(movie1, movie2)
+        }else{
+            XCTFail()
+        }
+        
+        let dicMovie4:[String:Any] = [
+            "title":"movie title" ,
+            "year": 2004 ,
+            "overview" : "overview text",
+            "ids": ["imdb": "tt0372784"]
+        ]
+        
+        if let movie1 = Movie(dicMovie: dicMovie1),
+            let movie2 = Movie(dicMovie: dicMovie4) {
+            XCTAssertNotEqual(movie1, movie2)
+        }else{
+            XCTFail()
+        }
+        
+        let dicMovie5:[String:Any] = [
+            "title":"movie title" ,
+            "year": 2005 ,
+            "overview" : "overview text",
+            "ids": ["imdb": "XYZ"]
+        ]
+        
+        if let movie1 = Movie(dicMovie: dicMovie1),
+            let movie2 = Movie(dicMovie: dicMovie5) {
+            XCTAssertNotEqual(movie1, movie2)
+        }else{
+            XCTFail()
+        }
+        
+        //Optionals ..for year
+        let dicMovie6:[String:Any] = [
+            "title":"movie title" ,
+            "overview" : "overview text",
+            "ids": ["imdb": "tt0372784"]
+        ]
+        
+        let dicMovie7:[String:Any] = [
+            "title":"movie title" ,
+            "overview" : "overview text",
+            "ids": ["imdb": "tt0372784"]
+        ]
+        
+        if let movie1 = Movie(dicMovie: dicMovie6),
+            let movie2 = Movie(dicMovie: dicMovie7) {
+            XCTAssertEqual(movie1, movie2)
+        }else{
+            XCTFail()
+        }
+        
+        let dicMovie8:[String:Any] = [
+            "title":"movie title" ,
+            "year": 2005 ,
+            "overview" : "overview text",
+            "ids": ["imdb": "tt0372784"]
+        ]
+        
+        if let movie1 = Movie(dicMovie: dicMovie6),
+            let movie2 = Movie(dicMovie: dicMovie8) {
+            XCTAssertNotEqual(movie1, movie2)
+        }else{
+            XCTFail()
+        }
+        
+    }
 
 }

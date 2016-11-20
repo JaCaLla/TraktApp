@@ -21,6 +21,10 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
     @IBOutlet weak var moviesListView: MoviesListView!
     @IBOutlet weak var movieSearchBar: MovieSearchBar!
 
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -111,6 +115,10 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
     func setupUI(){
         moviesListView.moviesListViewdelegate = self
         movieSearchBar.movieSearchBarDelegate = self
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        statusBar.backgroundColor = UIColor.black
+
     }
     
     func loadPopular(){
