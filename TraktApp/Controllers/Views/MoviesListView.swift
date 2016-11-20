@@ -118,7 +118,7 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
         self.delegate = self
         
         self.separatorColor = UIColor.clear
-        self.estimatedRowHeight = 200;
+        self.estimatedRowHeight = 192;
         self.rowHeight = UITableViewAutomaticDimension;
         
         self._refreshView()
