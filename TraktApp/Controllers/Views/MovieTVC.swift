@@ -15,6 +15,7 @@ class MovieTVC: UITableViewCell {
     @IBOutlet weak var lblYear: UILabel!
     @IBOutlet weak var lblOverview: UILabel!
     @IBOutlet weak var imvPoster: UIImageView!
+    
     var movie:Movie?{
         didSet{
             if let title = movie?.title{
@@ -31,9 +32,9 @@ class MovieTVC: UITableViewCell {
         }
     }
 
+    // MARK :- Public/Helpers
     func updateImageViewWithImage(image: UIImage?=nil) {
  
-        
         if let image = image {
             imvPoster.image = image
             imvPoster.alpha = 0

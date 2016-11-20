@@ -55,14 +55,7 @@ class FetchImageOp: ConcurrentOperation {
                 self.completion?(outputImage,url)
                 
             }
-            
-            
-           
- 
         }
-        
-        
-        
     }
     
     

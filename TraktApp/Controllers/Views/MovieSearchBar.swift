@@ -49,8 +49,6 @@ class MovieSearchBar: UISearchBar, UISearchBarDelegate {
         self._enableCancelButton(searchBar)
 
     }
-    
-    
 
     // MARK : - Internal/Private
     

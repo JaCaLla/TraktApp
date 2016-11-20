@@ -26,11 +26,9 @@ class SearchMovieUC {
         self.page = 1
         
         self.ongoingRequest += 1
-       // print("ongoingRequest + :\(ongoingRequest)")
         
         TraktService.sharedInstance.search(query: query, page: self.page, limit: self.limit, success: {[unowned self] movieSet in
             self.ongoingRequest -= 1
-           // print("ongoingRequest - :\(self.ongoingRequest)")
             
            if(self.ongoingRequest==0){
                 succeed(movieSet)

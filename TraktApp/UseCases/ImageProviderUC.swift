@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ImageProvider{
+class ImageProviderUC{
     
     let movie:Movie
     private let operationQueue = OperationQueue()
@@ -26,17 +26,14 @@ class ImageProvider{
             
             fetchImageOp.addDependency(fetchImageURLOp)
 
-            
              operationQueue.addOperations(operations, waitUntilFinished: false)
         }else{
-            let fetchImageOp = FetchImageOp(url: URL(string:"https://az853139.vo.msecnd.net/static/images/not-found.png"), completion: completion)
+            let fetchImageOp = FetchImageOp(url: URL(string:"http://www.isopractic.es/new/wp-content/uploads/2016/05/placeholder-348x348.gif"), completion: completion)
             
             let operations = [fetchImageOp]
             
-            
             operationQueue.addOperations(operations, waitUntilFinished: false)
         }
-        
     }
     
     func cancel() {
@@ -44,12 +41,12 @@ class ImageProvider{
     }
 }
 
-extension ImageProvider: Hashable {
+extension ImageProviderUC: Hashable {
     var hashValue: Int {
         return (movie.title + "\(movie.pictureURL)").hashValue
     }
 }
 
-func ==(lhs: ImageProvider, rhs: ImageProvider) -> Bool {
+func ==(lhs: ImageProviderUC, rhs: ImageProviderUC) -> Bool {
     return lhs.movie == rhs.movie
 }

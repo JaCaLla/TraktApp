@@ -19,25 +19,26 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
     
     var moviesList:[Movie] = []
     let cache = NSCache<NSString, UIImage>()
-    var imageProviders = Set<ImageProvider>()
+    var imageProviders = Set<ImageProviderUC>()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.setupView()
+        self._setupView()
     }
     
     // MARK : - Public/Helpers
     public func initialMoviesSet(moviesSet:MovieSet){
         self.moviesList = moviesSet.movies
         
-        self.refreshView()
+        self.setContentOffset(CGPoint.zero, animated: true)
+        self._refreshView()
     }
     
     public func addMoviesSet(moviesSet:MovieSet){
         self.moviesList += moviesSet.movies
         
-        self.refreshView()
+        self._refreshView()
     }
     
     
@@ -51,19 +52,17 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
         
         let movieTVC = self.dequeueReusableCell(withIdentifier: "MovieTVC")! as! MovieTVC
        movieTVC.movie = self.moviesList[indexPath.row]
-      
 
         if(indexPath.row == self.moviesList.count - 1 ){
+            
             moviesListViewdelegate?.onRequestANewMovieSet(completion: { [unowned self] moviesSet in
                 if (moviesSet.movies.count>0){
                     self.moviesList += moviesSet.movies
                     
                     DispatchQueue.main.async {
-                        self.refreshView()
+                        self._refreshView()
                     }
                 }
-
-               
             })
         }
         
@@ -79,7 +78,7 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
         
         guard cache.object( forKey: "\(movie.pictureURL)" as NSString) != nil  else {
             
-            let imageProvider = ImageProvider( movie:movie) { [unowned self]
+            let imageProvider = ImageProviderUC( movie:movie) { [unowned self]
                 image,url in
                 OperationQueue.main.addOperation {
                     
@@ -109,20 +108,12 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
         
     }
     
-    
     // MARK : - UITableViewDataSource
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
-        //FIXME
-        print("todo")
-    }
-    
-
     
     
     // MARK : - Internal/Private
     
-    private func setupView(){
+    private func _setupView(){
         self.dataSource = self
         self.delegate = self
         
@@ -130,11 +121,11 @@ class MoviesListView: UITableView, UITableViewDataSource,UITableViewDelegate {
         self.estimatedRowHeight = 200;
         self.rowHeight = UITableViewAutomaticDimension;
         
-        self.refreshView()
+        self._refreshView()
     }
 
     
-    private func refreshView(){
+    private func _refreshView(){
         
         self.reloadData()
 

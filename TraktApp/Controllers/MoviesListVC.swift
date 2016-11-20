@@ -29,8 +29,8 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.setupUI()
-        self.loadPopular()
+        self._setupUI()
+        self._loadPopular()
         
         
     }
@@ -50,22 +50,18 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
                 moviesSet in
                 completion(moviesSet)
             },serverFailure: { (error) in
-                // FIXME
-                print("TODO")
+                self._showServerError()
             },businessFailure: { (error) in
-                // FIXME
-                print("TODO")
+                self._showBusinesError()
             })
         case .searchListMode(let query):
             SearchMovieUC.sharedInstance.next(query:query,success: {
                 moviesSet in
                 completion(moviesSet)
             },serverFailure: { (error) in
-                // FIXME
-                print("TODO")
+                self._showServerError()
             },businessFailure: { (error) in
-                // FIXME
-                print("TODO")
+                self._showBusinesError()
             })
             
         }
@@ -81,11 +77,9 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
             
             self.moviesListView.initialMoviesSet(moviesSet: moviesSet)
             },serverFailure: { (error) in
-                // FIXME
-                print("TODO")
+                self._showServerError()
         },businessFailure: { (error) in
-            // FIXME
-            print("TODO")
+            self._showBusinesError()
         }
         )
     }
@@ -97,10 +91,7 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
 
         case .searchListMode:
             self.showingMode = .popularListMode
-            self.loadPopular()
-            
-          
-            
+            self._loadPopular()
         }
 
           view.endEditing(true)
@@ -112,7 +103,7 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
     
 
     // MARK: - Private/Internal
-    func setupUI(){
+    func _setupUI(){
         moviesListView.moviesListViewdelegate = self
         movieSearchBar.movieSearchBarDelegate = self
         
@@ -121,21 +112,33 @@ class MoviesListVC: UIViewController,MoviesListViewDelegate,MovieSearchBarDelega
 
     }
     
-    func loadPopular(){
+    func _loadPopular(){
         
         MostPopularUC.sharedInstance.first(success: {[unowned self]
                                             moviesSet in
                                             
                                             self.moviesListView.initialMoviesSet(moviesSet: moviesSet)
         },serverFailure: { (error) in
-            // FIXME
-            print("TODO")
+             self._showServerError()
         },businessFailure: { (error) in
-            // FIXME
-            print("TODO")
+            self._showBusinesError()
         }
         )
         
+    }
+    
+    func _showServerError(){
+        self._showAlertError(message: "Error with server!")
+    }
+    
+    func _showBusinesError(){
+        self._showAlertError(message: "Busines error!")
+    }
+    
+    func _showAlertError(message:String){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
 
